@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--very-dark-blue);
+}
+
+:root {
+    
+    /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    
+    /* Neutral */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    min-height: 100vh;
+    padding-block: 3rem;
+    background-color: var(--very-light-gray);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.introduction {
+    max-width: 32rem;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.introduction h1 {
+    font-size: 1.95rem;
+}
+
+.introduction p {
+    font-size: .9rem;
+    font-weight: 300;
+    opacity: .8;
+    margin-top: 1rem;
+}
+
+.container {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    width: 22rem;
+    min-height: 16rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 7px 30px -10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 30px -10px rgba(0,0,0,0.5);
+    box-shadow: 0px 7px 30px -10px rgba(0,0,0,0.5);
+    border-radius: .6rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.supervisor-div {
+    border-top: 5px solid var(--cyan);
+}
+
+.midle-div {
+    gap: 2rem;
+}
+
+.team-builder-div {
+    border-top: 5px solid var(--red);
+}
+
+.karma-div {
+    border-top: 5px solid var(--orange);
+}
+
+.calculator-div {
+    border-top: 5px solid var(--blue);
+}
+
+.card > p {
+    font-size: .9rem;
+    opacity: .6;
+    margin-top: .5rem;
+}
+
+.card > img {
+    position: absolute;
+    top: 10rem;
+    left: 16rem;
+}
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
