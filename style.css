@@ -26,7 +26,7 @@ body {
     min-height: 100vh;
     padding: 3rem 2rem;
     background-color: var(--very-light-gray);
-    gap: 3rem;
+    gap: min(1rem, 5vh);
 }
 
 .flex {
@@ -42,12 +42,12 @@ body {
 }
 
 .introduction h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 6vw, 2rem);
     font-weight: 200;
 }
 
 .introduction h1 {
-    font-size: 1.95rem;
+    font-size: clamp(1.48rem, 6vw, 1.95rem);
 }
 
 .introduction p {
@@ -60,7 +60,7 @@ body {
 .container {
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .card {
@@ -104,22 +104,44 @@ body {
 .card > img {
     position: absolute;
     top: 10rem;
-    left: 16rem;
+    left: 72%;
 }
 
 /* .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 833px){
     .container {
         max-width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, 22rem);
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     }
 
     .midle-div {
         flex-direction: row;
         grid-column: 1 / -1;
         grid-row: 2;
+    }
+}
+
+@media screen and (max-width: 832px){
+    
+    body {
+        gap: 5rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        column-gap: 4rem;
+    }
+
+    .card {
+        width: auto;
+        max-width: 22rem;
+    }
+
+    .card > p {
+        font-size: .8rem;
     }
 }
