@@ -24,8 +24,9 @@
 
 body {
     min-height: 100vh;
-    padding-block: 3rem;
+    padding: 3rem 2rem;
     background-color: var(--very-light-gray);
+    gap: 3rem;
 }
 
 .flex {
@@ -108,3 +109,17 @@ body {
 
 /* .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 22rem);
+    }
+
+    .midle-div {
+        flex-direction: row;
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+}
